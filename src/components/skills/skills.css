@@ -1,0 +1,162 @@
+.skills{
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+}
+
+.container{
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.skills-title{
+  text-align: center;
+
+  h2{
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: white;
+  
+    @media (max-width: 850px) {
+      font-size: 35px;
+    }
+  }
+} 
+
+.skills{
+  padding: 65px 0 100px;
+  position: relative;
+}
+
+.skill-items{
+  margin: 50px auto;
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 1200px) {
+    width: 1000px;
+  }
+
+  @media (max-width: 1000px) {
+    width: 800px;
+  }
+
+  @media (max-width: 850px) {
+    width: 700px;
+  }
+
+  @media (max-width: 738px) {
+    flex-direction: column;
+    width: 400px;
+  }
+}
+
+.soft-skills{
+  @media (max-width: 738px) {
+    margin-top: 120px;
+  }
+}
+
+.t-skills-items, .s-skills-items{
+  margin: 20px auto;
+}
+
+.t-skills-title, .s-skills-title {
+  color: white;
+  font-size: 25px;
+
+  @media (max-width: 1000px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 738px) {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.skill-item{
+  padding-top: 24px;
+}
+
+.skill-info{
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 450px) {
+    width: 350px;
+  }
+}
+
+.skill-info p{
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: gray;
+  opacity: 1;
+  animation: showText 0.5s 1s linear forwards;
+}
+
+.progress-line{
+  margin-top: 7px;
+  height: 10px;
+  width: 400px;
+  background-color: #cdcdcd;
+  border-radius: 50px;
+  position: relative;
+
+  @media (max-width: 1000px) {
+    width: 350px;
+  }
+
+  @media (max-width: 850px) {
+    height: 8px;
+    width: 300px;
+  }
+
+  @media (max-width: 738px) {
+    width: 400px;
+    height: 10px;
+  }
+
+  @media (max-width: 450px) {
+    width: 350px;
+  }
+}
+
+.progress-line span{
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  height: 100%;
+  border-radius: 50px;
+  position: absolute;
+  background-color: #4b5f83;
+  transition: 1s all;
+}
+
+.progress-line span.animate{
+  animation: animate 1.5s 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes showText{
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes animate{
+  100%{
+    transform: scaleX(1);
+  }
+}
